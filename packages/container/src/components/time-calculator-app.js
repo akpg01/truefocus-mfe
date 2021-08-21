@@ -1,4 +1,4 @@
-import { mount } from "time_calculator/TimeCalculatorApp";
+import { mount } from "calculator/TimeCalculatorApp";
 import React, { useRef, useEffect } from "react";
 
 export default () => {
