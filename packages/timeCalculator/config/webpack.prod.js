@@ -11,7 +11,7 @@ const prodConfig = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "time_calculator",
+      name: "calculator",
       filename: "remoteEntry.js",
       exposes: {
         "./TimeCalculatorApp": "./src/bootstrap",
