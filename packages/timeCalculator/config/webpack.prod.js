@@ -14,7 +14,7 @@ const prodConfig = {
       name: "calculator",
       filename: "remoteEntry.js",
       exposes: {
-        "./TimeCalculatorApp": "./src/bootstrap",
+        "./CalculatorApp": "./src/bootstrap",
       },
       shared: packageJson.dependencies,
     }),

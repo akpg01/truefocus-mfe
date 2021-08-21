@@ -14,7 +14,7 @@ const prodConfig = {
       name: "todos",
       filename: "remoteEntry.js",
       exposes: {
-        "./TodoListApp": "./src/bootstrap",
+        "./TodosApp": "./src/bootstrap",
       },
       shared: packageJson.dependencies,
     }),

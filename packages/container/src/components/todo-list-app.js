@@ -1,4 +1,4 @@
-import { mount } from "todos/TodoListApp";
+import { mount } from "todos/TodosApp";
 import React, { useRef, useEffect } from "react";
 
 export default () => {
