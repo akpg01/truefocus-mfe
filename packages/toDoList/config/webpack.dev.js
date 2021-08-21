@@ -14,7 +14,7 @@ const devConfig = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "todo_list",
+      name: "todos",
       filename: "remoteEntry.js",
       exposes: {
         "./TodoListApp": "./src/bootstrap",
