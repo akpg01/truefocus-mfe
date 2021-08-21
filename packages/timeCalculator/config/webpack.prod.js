@@ -7,6 +7,7 @@ const prodConfig = {
   mode: "production",
   output: {
     filename: "[name].[contenthash].js",
+    pulicPath: "/time_calculator/latest/",
   },
   plugins: [
     new ModuleFederationPlugin({
