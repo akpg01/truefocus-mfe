@@ -4,7 +4,7 @@ export default () => {
   return (
     <>
       <h3>Time Calculator!!ldkjsfoiauro92!</h3>
-      <div>I am the time calculator!!!!!!!</div>
+      <div>I am the time calculator!!!!!!! Yo, Yo, Yo</div>
     </>
   );
 };
