@@ -1,0 +1,34 @@
+const { merge } = require("webpack-merge");
+const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
+const commonConfig = require("./webpack.common");
+const packageJson = require("../package.json");
+
+const devConfig = {
+  mode: "development",
+  devServer: {
+    port: 8080,
+    historyApiFallback: {
+      index: "index.html",
+    },
+  },
+  plugins: [
+    new ModuleFederationPlugin({
+      name: "container",
+      remotes: {
+        landing: "landing@http://localhost:8081/remoteEntry.js",
+        auth: "auth@http://localhost:8082/remoteEntry.js",
+        availability: "availability@http://localhost:8083/remoteEntry.js",
+        goals: "goals@http://localhost:8084/remoteEntry.js",
+        pomodoro: "pomodoro@http://localhost:8085/remoteEntry.js",
+        projects: "projects@http://localhost:8086/remoteEntry.js",
+        schedule: "schedule@http://localhost:8087/remoteEntry.js",
+        stats: "stats@http://localhost:8088/remoteEntry.js",
+        time_calculator: "time_calculator@http://localhost:8089/remoteEntry.js",
+        todo_list: "todo_list@http://localhost:8090/remoteEntry.js",
+      },
+      shared: packageJson.dependencies,
+    }),
+  ],
+};
+
+module.exports = merge(commonConfig, devConfig);

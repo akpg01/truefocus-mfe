@@ -1,0 +1,32 @@
+{
+  "name": "packages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "container": "npm start --prefix container",
+    "auth": "npm start --prefix auth",
+    "landing": "npm start --prefix landing",
+    "availability": "npm start --prefix availability",
+    "goals": "npm start --prefix goals",
+    "pomodoro": "npm start --prefix pomodoro",
+    "projects": "npm start --prefix projects",
+    "schedule": "npm start --prefix schedule",
+    "stats": "npm start --prefix stats",
+    "timeCalculator": "npm start --prefix timeCalculator",
+    "todoList": "npm start --prefix todoList",
+    "dev": "concurrently \"npm run auth\" \"npm run landing\" \"npm run container\" \"npm run availability\" \"npm run goals\" \"npm run pomodoro\" \"npm run projects\" \"npm run schedule\" \"npm run stats\" \"npm run timeCalculator\" \"npm run todoList\""
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "concurrently": "^6.2.1"
+  }
+}
