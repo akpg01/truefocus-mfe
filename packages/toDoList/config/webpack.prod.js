@@ -7,7 +7,7 @@ const prodConfig = {
   mode: "production",
   output: {
     filename: "[name].[contenthash].js",
-    publicPath: "/todo_list/latest/",
+    publicPath: "/todos/latest/",
   },
   plugins: [
     new ModuleFederationPlugin({

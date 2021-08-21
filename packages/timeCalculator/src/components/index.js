@@ -1,5 +1,5 @@
 import React from "react";
 
 export default () => {
-  return <h3>Time Calculator</h3>;
+  return <h3>Time Calculator!!!</h3>;
 };
