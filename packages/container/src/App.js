@@ -7,8 +7,8 @@ import Pomodoro from "./components/pomodoro-app";
 import Projects from "./components/projects-app";
 import Schedule from "./components/schedule-app";
 import Stats from "./components/stats-app";
-import Calculator from "./components/time-calculator-app";
-import TodoList from "./components/todo-list-app";
+import Calculator from "./components/calculator-app";
+import TodoList from "./components/todos-app";
 
 export default () => {
   return (
