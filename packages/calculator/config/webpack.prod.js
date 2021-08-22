@@ -7,7 +7,7 @@ const prodConfig = {
   mode: "production",
   output: {
     filename: "[name].[contenthash].js",
-    pulicPath: "/calculator/latest/",
+    publicPath: "/calculator/latest/",
   },
   plugins: [
     new ModuleFederationPlugin({
