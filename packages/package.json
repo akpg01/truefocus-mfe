@@ -13,9 +13,9 @@
     "projects": "npm start --prefix projects",
     "schedule": "npm start --prefix schedule",
     "stats": "npm start --prefix stats",
-    "timeCalculator": "npm start --prefix timeCalculator",
-    "todoList": "npm start --prefix todoList",
-    "dev": "concurrently \"npm run auth\" \"npm run landing\" \"npm run container\" \"npm run availability\" \"npm run goals\" \"npm run pomodoro\" \"npm run projects\" \"npm run schedule\" \"npm run stats\" \"npm run timeCalculator\" \"npm run todoList\""
+    "calculator": "npm start --prefix calculator",
+    "todos": "npm start --prefix todos",
+    "dev": "concurrently \"npm run auth\" \"npm run landing\" \"npm run container\" \"npm run availability\" \"npm run goals\" \"npm run pomodoro\" \"npm run projects\" \"npm run schedule\" \"npm run stats\" \"npm run calculator\" \"npm run todos\""
   },
   "keywords": [],
   "repository": {
