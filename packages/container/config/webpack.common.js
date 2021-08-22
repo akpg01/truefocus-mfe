@@ -16,7 +16,12 @@ module.exports = {
       },
       {
         test: /\.(scss|css)$/,
+        exclude: /node_modules/,
         use: ["style-loader", "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.(png|jpe?g|gif|pdf)$/i,
+        use: ["file-loader?namd=[name].[ext]"],
       },
     ],
   },
