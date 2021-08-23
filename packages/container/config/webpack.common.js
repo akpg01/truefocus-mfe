@@ -31,7 +31,7 @@ module.exports = {
         use: [{ loader: "url-loader" }],
       },
       {
-        test: /\.(gif|pdf)$/,
+        test: /\.(gif|pdf|ico)$/,
         use: [{ loader: "file-loader", options: { name: "[name].[ext]" } }],
       },
     ],
