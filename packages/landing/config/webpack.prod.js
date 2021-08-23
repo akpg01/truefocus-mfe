@@ -27,7 +27,6 @@ const prodConfig = {
         test: /\.(s(a|c)ss)$/,
         use: [
           MiniCssExtractPlugin.loader,
-          "style-loader",
           "css-loader",
           "resolve-url-loader",
           { loader: "sass-loader", options: { sourceMap: true } },
