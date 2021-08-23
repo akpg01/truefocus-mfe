@@ -25,7 +25,13 @@ const prodConfig = {
     rules: [
       {
         test: /\.(s(a|c)ss)$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+        use: [
+          MiniCssExtractPlugin.loader,
+          "style-loader",
+          "css-loader",
+          "resolve-url-loader",
+          "sass-loader",
+        ],
       },
     ],
   },
