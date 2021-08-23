@@ -27,6 +27,7 @@ const prodConfig = {
         stats: `stats@${domain}/stats/latest/remoteEntry.js`,
         todos: `todos@${domain}/todos/latest/remoteEntry.js`,
         calculator: `calculator@${domain}/calculator/latest/remoteEntry.js`,
+        dashboard: `dashboard@${domain}/dashboard/latest/remoteEntry.js`,
       },
       shared: packageJson.dependencies,
     }),

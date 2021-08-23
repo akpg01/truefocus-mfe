@@ -84,3 +84,26 @@
     }
   }
 }
+
+@mixin gradient($direction, $list) {
+  background: color(orange);
+  background: -webkit-linear-gradient($direction, $list);
+  background: -moz-linear-gradient($direction, $list);
+  background: -o-linear-gradient($direction, $list);
+  background: -ms-linear-gradient($direction, $list);
+  background: linear-gradient($direction, $list);
+}
+
+@mixin animation($bg-size, $time) {
+  background-size: $bg-size $bg-size;
+  -webkit-animation: AnimationName $time ease infinite;
+
+  @-webkit-keyframes AnimationName {
+    0% {
+      background-position: 100% 0%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+}

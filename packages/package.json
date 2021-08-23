@@ -15,7 +15,8 @@
     "stats": "npm start --prefix stats",
     "calculator": "npm start --prefix calculator",
     "todos": "npm start --prefix todos",
-    "dev": "concurrently \"npm run auth\" \"npm run landing\" \"npm run container\" \"npm run availability\" \"npm run goals\" \"npm run pomodoro\" \"npm run projects\" \"npm run schedule\" \"npm run stats\" \"npm run calculator\" \"npm run todos\""
+    "dashboard": "npm start --prefix dashboard",
+    "dev": "concurrently \"npm run auth\" \"npm run landing\" \"npm run container\" \"npm run availability\" \"npm run goals\" \"npm run pomodoro\" \"npm run projects\" \"npm run schedule\" \"npm run stats\" \"npm run calculator\" \"npm run todos\" \"npm run dashboard\""
   },
   "keywords": [],
   "repository": {

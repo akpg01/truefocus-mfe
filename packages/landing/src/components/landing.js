@@ -15,7 +15,7 @@ export default () => {
     <>
       <div className="heading">
         <div className="brand">
-          <Link to="/#">
+          <Link to="/">
             <div className="brand-logo">
               <div className="logo">
                 <FontAwesomeIcon icon={["fas", "glasses"]} aria-hidden="true" />
@@ -33,14 +33,14 @@ export default () => {
           </div>
           <div className="heading__cta-btns">
             <div className="heading__button-group">
-              <Link to="/login">
+              <Link to="/auth/signin">
                 <button className="btn heading__btn">LOGIN</button>
               </Link>
               <div className="heading__cta-signup">
                 <p className="heading__cta-description">
                   Don't have an account?
                 </p>
-                <a href="/login" className="heading__signup">
+                <a href="/auth/signup" className="heading__signup">
                   Sign Up
                 </a>
               </div>

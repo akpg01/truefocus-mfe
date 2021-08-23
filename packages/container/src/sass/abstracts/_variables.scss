@@ -32,6 +32,21 @@ $fonct-sizes: (
   @return map-get($font-sizes, $size);
 }
 
+@function text-color($list) {
+  $text-list: ();
+  @each $color, $percentage in $list {
+    @if lightness($color) > 50% {
+      $text-list: append($text-list, $black $percentage, comma);
+    } @else {
+      $text-list: append($text-list, $white $percentage, comma);
+    }
+  }
+  @return $text-list;
+}
+
 $font-dancingScript: "Dancing Script", cursive;
 $font-josefinSans: "Josefin Sans", sans-serif;
 $font-nunito: "Nunito", sans-serif;
+
+$gradient-list: (color(orange) 0%), (color(orange) 50%), (color(white 50%)),
+  (color(white) 100%);

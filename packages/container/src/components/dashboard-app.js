@@ -1,4 +1,4 @@
-import { mount } from "calculator/CalculatorApp";
+import { mount } from "dashboard/DashboardApp";
 import React, { useRef, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 

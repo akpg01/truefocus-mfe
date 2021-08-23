@@ -1,15 +1,15 @@
 const { merge } = require("webpack-merge");
+
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const commonConfig = require("./webpack.common");
 const packageJson = require("../package.json");
 
 const devConfig = {
   mode: "development",
+  output: { publicPath: "http://localhost:8080/" },
   devServer: {
     port: 8080,
-    historyApiFallback: {
-      index: "index.html",
-    },
+    historyApiFallback: true,
   },
   plugins: [
     new ModuleFederationPlugin({
@@ -25,6 +25,7 @@ const devConfig = {
         stats: "stats@http://localhost:8088/remoteEntry.js",
         calculator: "calculator@http://localhost:8089/remoteEntry.js",
         todos: "todos@http://localhost:8090/remoteEntry.js",
+        dashboard: "dashboard@http://localhost:8091/remoteEntry.js",
       },
       shared: packageJson.dependencies,
     }),
