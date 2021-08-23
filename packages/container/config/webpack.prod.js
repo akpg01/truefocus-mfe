@@ -13,6 +13,7 @@ const prodConfig = {
     publicPath: "/container/latest/",
   },
   plugins: [
+    new MiniCssExtractPlugin(),
     new ModuleFederationPlugin({
       name: "container",
       remotes: {

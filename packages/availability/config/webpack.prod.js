@@ -11,6 +11,7 @@ const prodConfig = {
     publicPath: "/availability/latest/",
   },
   plugins: [
+    new MiniCssExtractPlugin(),
     new ModuleFederationPlugin({
       name: "availability",
       filename: "remoteEntry.js",

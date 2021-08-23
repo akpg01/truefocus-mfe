@@ -11,6 +11,7 @@ const prodConfig = {
     publicPath: "/auth/latest/",
   },
   plugins: [
+    new MiniCssExtractPlugin(),
     new ModuleFederationPlugin({
       name: "auth",
       filename: "remoteEntry.js",

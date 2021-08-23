@@ -11,6 +11,7 @@ const prodConfig = {
     publicPath: "/pomodoro/latest/",
   },
   plugins: [
+    new MiniCssExtractPlugin(),
     new ModuleFederationPlugin({
       name: "pomodoro",
       filename: "remoteEntry.js",

@@ -11,6 +11,7 @@ const prodConfig = {
     publicPath: "/schedule/latest/",
   },
   plugins: [
+    new MiniCssExtractPlugin(),
     new ModuleFederationPlugin({
       name: "schedule",
       filename: "remoteEntry.js",

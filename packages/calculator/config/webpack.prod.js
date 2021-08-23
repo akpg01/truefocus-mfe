@@ -11,6 +11,7 @@ const prodConfig = {
     publicPath: "/calculator/latest/",
   },
   plugins: [
+    new MiniCssExtractPlugin(),
     new ModuleFederationPlugin({
       name: "calculator",
       filename: "remoteEntry.js",

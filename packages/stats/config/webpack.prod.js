@@ -11,6 +11,7 @@ const prodConfig = {
     publicPath: "/stats/latest/",
   },
   plugins: [
+    new MiniCssExtractPlugin(),
     new ModuleFederationPlugin({
       name: "stats",
       filename: "remoteEntry.js",
