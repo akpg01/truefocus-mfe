@@ -1,0 +1,50 @@
+.footer {
+  width: 100%;
+  height: 15rem;
+  background-color: color(lightBlack);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include response(xs) {
+    height: 18rem;
+  }
+
+  &__content {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+
+    @include response(xxl) {
+      width: 80%;
+    }
+
+    @include response(md) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 50%;
+    }
+  }
+  .copyright {
+    font-family: $font-josefinSans;
+    font-size: 1.2rem;
+    color: color(medGray);
+
+    @include response(md) {
+      order: 1;
+      margin-top: 3rem;
+    }
+  }
+
+  .social-list {
+    @include response(md) {
+      width: 100vw;
+    }
+  }
+  .social-list a {
+    margin: 0 2rem;
+    font-size: 1.2rem;
+    color: color(medGray);
+  }
+}

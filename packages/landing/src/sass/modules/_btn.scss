@@ -1,0 +1,54 @@
+.heading {
+  &__cta-btns {
+    margin-top: 40px;
+    .btn {
+      width: 170px;
+      height: 45px;
+      font-family: $font-josefinSans;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: color(orange);
+      background-color: transparent;
+      border: 1px solid color(orange);
+      outline: none;
+      cursor: pointer;
+      transition: all 0.4s;
+
+      &:hover {
+        background-color: color(orange);
+        color: color(dark);
+      }
+
+      @media (max-width: 800px) {
+        width: 150px;
+        height: 35px;
+        font-size: 0.75rem;
+      }
+    }
+  }
+  &__cta-signup {
+    font-family: $font-josefinSans;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
+  &__cta-description {
+    font-family: $font-josefinSans;
+    margin-right: 10px;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #fff;
+    letter-spacing: 2px;
+  }
+
+  & a {
+    text-decoration: none;
+    color: color(orange);
+  }
+
+  &__signup:hover {
+    color: color(peach);
+    transition: all 0.4s;
+  }
+}

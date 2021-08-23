@@ -1,0 +1,79 @@
+.overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  cursor: pointer;
+
+  &-message-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+
+  &.hide {
+    display: none;
+  }
+
+  &.show {
+    display: block;
+  }
+  &-message-container {
+    background-color: color(white);
+    width: 50vw;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+  }
+
+  &-message-container h2,
+  &-message-container h3 {
+    text-align: center;
+    line-height: 55px;
+  }
+
+  &-message-container h3 {
+    color: red;
+  }
+  &-message {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    width: 100%;
+    text-align: center;
+  }
+  &-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  &-message-desc {
+    max-width: 100%;
+    font-weight: bold;
+    color: color(orange);
+    text-align: center;
+    background-color: color(lightSlate);
+    border-radius: 5px;
+    border: 1px dotted color(lightGray);
+    padding: 20px;
+  }
+  &-message-title {
+    border-bottom: 2px solid color(lightGray);
+    width: 100%;
+  }
+  .button-container {
+    display: flex;
+    margin-top: 30px;
+  }
+}

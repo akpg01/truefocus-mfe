@@ -1,0 +1,172 @@
+.contact {
+  width: 100%;
+  height: 100vh;
+  background-color: color(dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__wrapper {
+    width: 60%;
+    height: 65vh;
+    display: flex;
+    box-shadow: 0 3rem 7rem rgba(color(dark), 0.5);
+
+    @include response(xxl) {
+      width: 80%;
+      height: 50rem;
+    }
+
+    @include response(lg) {
+      width: 90%;
+      height: 47rem;
+    }
+  }
+
+  &__left {
+    width: 35%;
+    background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(22, 22, 22, 0.9)),
+      url(../../images/path.jpg) center no-repeat;
+    background-size: cover;
+
+    @include response(md) {
+      width: 0;
+    }
+  }
+
+  &__right {
+    width: 65%;
+    background-color: color(lightGray);
+    padding: 2rem 3rem 3rem 3rem;
+
+    @include response(md) {
+      width: 100%;
+    }
+  }
+
+  &__heading {
+    font-family: $font-josefinSans;
+    font-size: 3.6rem;
+    font-weight: 300;
+    color: color(dark);
+    margin-bottom: 3rem;
+    text-align: center;
+
+    @include response(lg) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__right form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .field {
+      width: 40rem;
+      background-color: transparent;
+      border: none;
+      border-bottom: 0.2rem dashed color(slate);
+      margin: 2.5rem 0;
+      padding: 1rem 1rem 1rem 0;
+      font-family: $font-josefinSans;
+      color: color(dark);
+
+      @include response(lg) {
+        margin: 2rem 0;
+      }
+
+      @include response(md) {
+        width: 45rem;
+      }
+
+      @include response(sm) {
+        width: 35rem;
+      }
+
+      @include response(xs) {
+        width: 25rem;
+      }
+    }
+
+    .input-group {
+      position: relative;
+    }
+
+    .input-group input {
+      height: 2rem;
+      outline: none;
+    }
+
+    .input-group textarea {
+      max-width: 40rem;
+      max-height: 7rem;
+      outline: none;
+
+      @include response(md) {
+        max-width: 45rem;
+      }
+
+      @include response(sm) {
+        max-width: 35rem;
+      }
+    }
+
+    .field:focus {
+      border-bottom-style: solid;
+    }
+
+    .input-group label {
+      position: absolute;
+      left: 0;
+      font-family: $font-josefinSans;
+      font-size: 1.1rem;
+      color: color(dark);
+      text-transform: uppercase;
+      pointer-events: none;
+      transition: all 0.3s;
+    }
+
+    .input-label {
+      bottom: 3rem;
+    }
+
+    .message {
+      bottom: 6rem;
+    }
+
+    .field:focus ~ label {
+      transform: translateY(-3rem);
+      font-size: 0.8rem;
+    }
+  }
+  .submit-btn {
+    width: 30rem;
+    height: 5rem;
+    background-color: color(orange);
+    color: color(white);
+    border: none;
+    margin-top: 2rem;
+    font-family: $font-josefinSans;
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+    text-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
+
+    @include response(md) {
+      width: 45rem;
+    }
+
+    @include response(sm) {
+      width: 35rem;
+    }
+
+    @include response(xs) {
+      width: 25rem;
+    }
+  }
+}

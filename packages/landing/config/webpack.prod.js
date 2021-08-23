@@ -10,6 +10,7 @@ const prodConfig = {
     publicPath: "/landing/latest/",
   },
   plugins: [
+    new MiniCssExtractPlugin(),
     new ModuleFederationPlugin({
       name: "landing",
       filename: "remoteEntry.js",
@@ -19,6 +20,14 @@ const prodConfig = {
       shared: packageJson.dependencies,
     }),
   ],
+  module: {
+    rules: [
+      {
+        test: /\.(s(a|c)ss)$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+      },
+    ],
+  },
 };
 
 module.exports = merge(commonConfig, prodConfig);
