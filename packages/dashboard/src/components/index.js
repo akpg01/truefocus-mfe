@@ -88,6 +88,7 @@ export default () => {
         </div>
       </div>
       <div className="content">
+        <h4>Comonents go heere!!!</h4>
         {/* {step === 0 ? <Calculator /> : null}
         {step === 1 ? <Projects /> : null}
         {step === 2 ? <Available /> : null} */}
