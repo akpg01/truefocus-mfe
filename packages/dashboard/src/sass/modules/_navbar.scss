@@ -1,0 +1,212 @@
+.hamburger-menu {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  z-index: 300;
+
+  @media (max-width: 800px) {
+    width: 35px;
+    height: 35px;
+  }
+
+  @media (max-width: 500px) {
+    width: 25px;
+    height: 25px;
+  }
+
+  .menu {
+    @extend %fullspace;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    transition: transform 0.5s;
+    &-line {
+      width: 100%;
+      height: 4px;
+      background-color: color(orange);
+      transform-origin: right;
+      transition: all 0.5s 0.5s;
+
+      @media (max-width: 800px) {
+        height: 3px;
+      }
+
+      @media (max-width: 500px) {
+        height: 2px;
+      }
+    }
+  }
+}
+
+.navbar {
+  position: relative;
+  z-index: 200;
+  &-navigation {
+    display: flex;
+
+    &-left {
+      width: 50vw;
+      height: 100vh;
+      background-color: color(lightSlate);
+      color: color(dark);
+      position: fixed;
+      display: flex;
+      justify-content: center;
+      left: -50vw;
+      transition: left 0.8s cubic-bezier(1, 0, 0, 1);
+
+      @media (max-width: 800px) {
+        display: none;
+      }
+
+      .quote-section {
+        font-size: 2rem;
+        font-weight: 300;
+        max-width: 45vw;
+        @include flexLayout;
+        flex-direction: column;
+
+        &-quote {
+          display: flex;
+          line-height: 50px;
+          .quote {
+            padding-left: 10px;
+          }
+        }
+        .author-occupation {
+          margin-top: 20px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          .occupation {
+            font-size: 1.25rem;
+            margin-top: 20px;
+            color: color(brown);
+          }
+        }
+      }
+    }
+
+    &-right {
+      width: 50vw;
+      height: 100vh;
+      background-color: color(dark);
+      position: fixed;
+      right: -50vw;
+      @include flexLayout;
+      transition: right 0.8s cubic-bezier(1, 0, 0, 1);
+
+      @media (max-width: 800px) {
+        width: 100vw;
+        right: -100vw;
+      }
+    }
+    .nav-list {
+      &-item {
+        list-style: none;
+      }
+      &-link a {
+        font-family: $font-josefinSans;
+        font-size: 3.125rem;
+        @include textStyles(capitalize);
+        color: color(medGray);
+        text-decoration: none;
+        display: block;
+        margin: 20px;
+        text-align: center;
+        transition: all 0.5s;
+
+        &:hover {
+          color: color(orange);
+          letter-spacing: 4px;
+        }
+
+        @media (max-width: 600px) {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+.navbar-navigation-right {
+  display: flex;
+  flex-direction: column;
+
+  .brand {
+    margin-bottom: 4rem;
+    .brand-logo {
+      display: flex;
+      align-items: center;
+
+      .logo {
+        font-size: 3rem;
+        color: color(orange);
+        margin-right: 10px;
+        border-radius: 50%;
+        border: 4px solid color(orange);
+        width: 110px;
+        height: 110px;
+        @include flexLayout;
+
+        @media (max-width: 1000px) {
+          font-size: 50px;
+          width: 90px;
+          height: 90px;
+        }
+
+        @media (max-width: 500px) {
+          width: 50px;
+          height: 50px;
+          font-size: 30px;
+          border-width: 2px;
+        }
+      }
+    }
+  }
+
+  .companyname {
+    font-family: $font-nunito;
+    font-size: 3.6rem;
+    @include updateColor;
+    font-weight: 300;
+
+    @media (max-width: 1000px) {
+      font-size: 2.5rem;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 2.25rem;
+      text-align: center;
+    }
+  }
+}
+
+
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-left {
+  left: 0;
+}
+
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-right {
+  right: 0;
+}
+
+.checkbox:checked ~ .hamburger-menu .menu {
+  transform: rotateZ(90deg);
+}
+
+.checkbox:checked ~ .hamburger-menu .menu-line-1 {
+  transform: rotateZ(-40deg);
+}
+
+.checkbox:checked ~ .hamburger-menu .menu-line-2 {
+  opacity: 0;
+}
+
+.checkbox:checked ~ .hamburger-menu .menu-line-3 {
+  transform: rotateZ(40deg);
+}
