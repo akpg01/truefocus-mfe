@@ -3,8 +3,8 @@ import React from "react";
 export default () => {
   return (
     <>
-      <h3>Time Calculator!!ldkjsfoiauro92!</h3>
-      <div>I am the time calculator!!!!!!! Yo, Yo, Yo</div>
+      <h3>Dashboard</h3>
+      <div>Welcome to the Dashboard!!</div>
     </>
   );
 };

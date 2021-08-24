@@ -1,11 +1,13 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
-.container-progress-bar__wrapper {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  margin: 0 auto;
+.container-progress-bar {
+  &__wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+  }
 
   &__filler {
     @include gradient(left, $gradient-list);

@@ -1,5 +1,11 @@
-import React, { lazy, Suspense, useEffect } from "react";
-import { Router, Route, Switch, Redirect } from "react-router-dom";
+import React, { useState, lazy, Suspense, useEffect } from "react";
+import {
+  Router,
+  Route,
+  Switch,
+  Redirect,
+  BrowserRouter,
+} from "react-router-dom";
 
 import Header from "./components/layout/navbar";
 import Footer from "./components/layout/footer";
@@ -24,6 +30,13 @@ const history = createBrowserHistory();
 import "./sass/App.scss";
 
 export default () => {
+  const [isSignedIn, setIsSignedIn] = useState(false);
+
+  useEffect(() => {
+    if (isSignedIn) {
+      history.push("/dashboard");
+    }
+  }, []);
   return (
     <>
       <Router history={history}>
@@ -39,7 +52,7 @@ export default () => {
             <Route path="/stats" component={StatsLazy} />
             <Route path="/calculator" component={CalculatorLazy} />
             <Route path="/todos" component={TodosLazy} />
-            <Route exact path="/dashboard" component={DashboardLazy} />
+            <Route path="/dashboard" component={DashboardLazy} />
             <Route path="/" component={LandingLazy} />
           </Switch>
         </Suspense>
