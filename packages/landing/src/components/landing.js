@@ -33,16 +33,16 @@ export default () => {
           </div>
           <div className="heading__cta-btns">
             <div className="heading__button-group">
-              <Link to="/auth/signin">
+              <Link to="/auth/login">
                 <button className="btn heading__btn">LOGIN</button>
               </Link>
               <div className="heading__cta-signup">
                 <p className="heading__cta-description">
                   Don't have an account?
                 </p>
-                <a href="/auth/signup" className="heading__signup">
+                <Link to="/auth/login" className="heading__signup">
                   Sign Up
-                </a>
+                </Link>
               </div>
             </div>
           </div>

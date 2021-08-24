@@ -31,12 +31,12 @@ export default () => {
         <ul className="nav-list">
           <li className="nav-list-item">
             <div className="nav-list-link">
-              <a href="/#">Time Calculator</a>
+              <a href="/calculator">Time Calculator</a>
             </div>
           </li>
           <li className="nav-list-item">
             <div className="nav-list-link">
-              <a href="/login">Log In</a>
+              <a href="/auth/login">Log In</a>
             </div>
           </li>
         </ul>
@@ -124,6 +124,21 @@ export default () => {
             </div>
           </div>
           <div className="navbar-navigation-right">
+            <div className="brand">
+              <a href="/">
+                <div className="brand-logo">
+                  <div className="logo">
+                    <FontAwesomeIcon
+                      icon={["fas", "glasses"]}
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <div>
+                    <div className="companyname">TrueFocus</div>
+                  </div>
+                </div>
+              </a>
+            </div>
             <ul className="nav-list">
               {!loggedIn ? <LoggedOutLinks /> : <LoggedInLinks />}
             </ul>

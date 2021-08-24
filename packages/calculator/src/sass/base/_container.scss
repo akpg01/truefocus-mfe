@@ -1,0 +1,4 @@
+.content {
+  @include flexLayout;
+  min-height: calc(100vh - 15rem);
+}
