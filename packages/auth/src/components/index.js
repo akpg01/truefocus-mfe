@@ -1,6 +1,16 @@
 import React from "react";
 
-export default () => {
+export default ({ onSignIn }) => {
+  const handleLogin = (e) => {
+    e.preventDefault();
+    onSignIn();
+  };
+
+  const handleSignUp = (e) => {
+    e.preventDefault();
+    onSignIn();
+  };
+
   return (
     <>
       <div className="content">
@@ -38,7 +48,12 @@ export default () => {
               className="form-input"
               placeholder="Password"
             />
-            <input type="submit" className="form-btn" value="SIGN UP" />
+            <input
+              type="submit"
+              className="form-btn"
+              value="SIGN UP"
+              onClick={handleLogin}
+            />
           </form>
 
           <form action="" className="login-form">
@@ -53,7 +68,12 @@ export default () => {
               className="form-input"
               placeholder="Password"
             />
-            <input type="submit" className="form-btn" value="LOG IN" />
+            <input
+              type="submit"
+              className="form-btn"
+              value="LOG IN"
+              onClick={handleSignUp}
+            />
           </form>
         </div>
       </div>

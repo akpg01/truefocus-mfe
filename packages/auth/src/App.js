@@ -1,18 +1,20 @@
 import React from "react";
-import { Switch, Route, BrowserRouter } from "react-router-dom";
+import { Switch, Route, Router } from "react-router-dom";
 
 import Login from "./components/index";
 
 import "./sass/App.scss";
 
-export default () => {
+export default ({ history, onSignIn }) => {
   return (
     <div>
-      <BrowserRouter>
+      <Router history={history}>
         <Switch>
-          <Route path="/" component={Login} />
+          <Route path="/">
+            <Login onSignIn={onSignIn} />
+          </Route>
         </Switch>
-      </BrowserRouter>
+      </Router>
     </div>
   );
 };

@@ -8,8 +8,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Library creation
 library.add(fas, fab);
 
-export default () => {
-  const [loggedIn, setLoggedIn] = useState(false);
+// pass in user object (issignedIn; therefore, and assertain user role (i.e. admin, subscriber))
+export default ({ isSignedIn, onSignOut }) => {
   const [admin, setAdmin] = useState(false);
   const [random, setRandom] = useState(0);
   const [open, setOpen] = useState(false);
@@ -25,6 +25,13 @@ export default () => {
     }
   };
 
+  const onClick = () => {
+    console.log("i was clicked toooo");
+    if (isSignedIn && onSignOut) {
+      onSignOut();
+    }
+  };
+
   const LoggedOutLinks = () => {
     return (
       <>
@@ -36,7 +43,9 @@ export default () => {
           </li>
           <li className="nav-list-item">
             <div className="nav-list-link">
-              <a href="/auth/login">Log In</a>
+              <a href="/auth/login" onClick={onClick}>
+                Log In
+              </a>
             </div>
           </li>
         </ul>
@@ -77,7 +86,9 @@ export default () => {
           )}
           <li className="nav-list-item">
             <div className="nav-list-link">
-              <a href="/#">Logout</a>
+              <a href="/auth/login" onClick={onClick}>
+                Logout
+              </a>
             </div>
           </li>
         </ul>
@@ -140,7 +151,7 @@ export default () => {
               </a>
             </div>
             <ul className="nav-list">
-              {!loggedIn ? <LoggedOutLinks /> : <LoggedInLinks />}
+              {!isSignedIn ? <LoggedOutLinks /> : <LoggedInLinks />}
             </ul>
           </div>
         </div>

@@ -1,8 +1,11 @@
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
+@import "base/base";
+
 @import "layout/container";
 @import "layout/footer";
 @import "layout/navbar";
+@import "layout/logo";
 
-@import "ui-elements/progress-bar";
+@import "ui-elements/spinner.scss";

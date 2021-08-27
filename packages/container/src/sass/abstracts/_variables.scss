@@ -16,11 +16,14 @@ $colors: (
   lightGray: #eee,
 );
 
+// size of spinner
+$spinner-size: 4rem;
+
 @function color($color-name) {
   @return map-get($colors, $color-name);
 }
 
-$fonct-sizes: (
+$font-sizes: (
   xl: 3rem,
   lg: 2.5rem,
   md: 2rem,

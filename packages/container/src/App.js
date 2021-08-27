@@ -1,4 +1,5 @@
 import React, { useState, lazy, Suspense, useEffect } from "react";
+
 import {
   Router,
   Route,
@@ -9,7 +10,7 @@ import {
 
 import Header from "./components/layout/navbar";
 import Footer from "./components/layout/footer";
-import ProgressBar from "./components/ui-elements/progress-bar";
+import Spinner from "./components/ui-elements/spinner";
 
 const LandingLazy = lazy(() => import("./components/landing-app"));
 const AuthLazy = lazy(() => import("./components/auth-app"));
@@ -30,6 +31,8 @@ const history = createBrowserHistory();
 import "./sass/App.scss";
 
 export default () => {
+  // pass in user object (issignedIn; therefore, and assertain user role (i.e. admin, subscriber))
+  // --- get user details from DB
   const [isSignedIn, setIsSignedIn] = useState(false);
 
   useEffect(() => {
@@ -40,10 +43,15 @@ export default () => {
   return (
     <>
       <Router history={history}>
-        <Header />
-        <Suspense fallback={<ProgressBar />}>
+        <Suspense fallback={<Spinner />}>
+          <Header
+            onSignOut={() => setIsSignedIn(false)}
+            isSignedIn={isSignedIn}
+          />
           <Switch>
-            <Route path="/auth" component={AuthLazy} />
+            <Route path="/auth">
+              <AuthLazy onSignIn={() => setIsSignedIn(true)} />
+            </Route>
             <Route path="/availability" component={AvailabilityLazy} />
             <Route path="/goals" component={GoalsLazy} />
             <Route path="/pomodoro" component={PomodoroLazy} />
@@ -55,8 +63,8 @@ export default () => {
             <Route path="/dashboard" component={DashboardLazy} />
             <Route path="/" component={LandingLazy} />
           </Switch>
+          <Footer />
         </Suspense>
-        <Footer />
       </Router>
     </>
   );
