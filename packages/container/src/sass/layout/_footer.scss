@@ -1,6 +1,7 @@
 .footer {
   width: 100%;
-  height: 15rem;
+  min-height: 15rem;
+  max-height: 100vh;
   background-color: color(lightBlack);
   display: flex;
   justify-content: center;

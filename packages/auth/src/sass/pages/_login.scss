@@ -81,6 +81,7 @@
     padding: 1rem;
     border: none;
     margin-top: 0.5rem;
+    cursor: pointer;
 
     @include response(md) {
       font-size: 1.2rem;
