@@ -1,12 +1,6 @@
 import React, { useState, lazy, Suspense, useEffect } from "react";
 
-import {
-  Router,
-  Route,
-  Switch,
-  Redirect,
-  BrowserRouter,
-} from "react-router-dom";
+import { Router, Route, Switch, Redirect } from "react-router-dom";
 
 import Header from "./components/layout/navbar";
 import Footer from "./components/layout/footer";
@@ -39,7 +33,8 @@ export default () => {
     if (isSignedIn) {
       history.push("/dashboard");
     }
-  }, []);
+  }, [isSignedIn]);
+
   return (
     <>
       <Router history={history}>
@@ -60,7 +55,10 @@ export default () => {
             <Route path="/stats" component={StatsLazy} />
             <Route path="/calculator" component={CalculatorLazy} />
             <Route path="/todos" component={TodosLazy} />
-            <Route path="/dashboard" component={DashboardLazy} />
+            <Route path="/dashboard">
+              {!isSignedIn && <Redirect to="/auth/login" />}
+              <DashboardLazy />
+            </Route>
             <Route path="/" component={LandingLazy} />
           </Switch>
           <Footer />
