@@ -15,7 +15,7 @@ export default ({ onSignIn }) => {
   return (
     <>
       <Helmet>
-        <title>Welcome | TrueFocus</title>
+        <title>Login | TrueFocus</title>
       </Helmet>
       <div className="content">
         <div className="forms-wrapper">
