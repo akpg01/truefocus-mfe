@@ -26,7 +26,6 @@ export default ({ isSignedIn, onSignOut }) => {
   };
 
   const onClick = () => {
-    console.log("i was clicked toooo");
     if (isSignedIn && onSignOut) {
       onSignOut();
     }
@@ -57,6 +56,11 @@ export default ({ isSignedIn, onSignOut }) => {
     return (
       <>
         <ul className="nav-list">
+          <li className="nav-list-item">
+            <div className="nav-list-link">
+              <a href="/dashboard">Dashboard</a>
+            </div>
+          </li>
           <li className="nav-list-item">
             <div className="nav-list-link">
               <a href="/#">My Plan</a>
