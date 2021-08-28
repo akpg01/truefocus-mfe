@@ -6,6 +6,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Features from "../components/layout/features";
 import Contact from "../components/layout/contact";
+import { Helmet } from "react-helmet";
 
 // Library creation
 library.add(fas, fab);
@@ -13,6 +14,9 @@ library.add(fas, fab);
 export default () => {
   return (
     <>
+      <Helmet>
+        <title>Welcome | TrueFocus</title>
+      </Helmet>
       <div className="heading">
         <div className="brand">
           <Link to="/">

@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 export default ({ onSignIn }) => {
   const handleLogin = (e) => {
@@ -13,6 +14,9 @@ export default ({ onSignIn }) => {
 
   return (
     <>
+      <Helmet>
+        <title>Welcome | TrueFocus</title>
+      </Helmet>
       <div className="content">
         <div className="forms-wrapper">
           <input type="checkbox" id="show-form" hidden />
