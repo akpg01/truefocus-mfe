@@ -1,0 +1,65 @@
+.multi-form-layout {
+  .multi-form-progress {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin: 35px auto;
+    max-width: 70rem;
+    padding: 0px 15px;
+
+    .multi-form-progress-step {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      .step {
+        text-align: center;
+        .title {
+          color: color(slate);
+          text-transform: capitalize;
+          &.completed {
+            color: color(orange);
+          }
+        }
+        .circle {
+          border: 1px solid color(slate);
+          height: 20px;
+          width: 20px;
+          border-radius: 100%;
+          color: color(slate);
+          display: inline-block;
+          position: relative;
+          transition: background-color 500ms;
+          line-height: 20px;
+          text-align: center;
+          margin-top: 5px;
+
+          &.completed {
+            color: color(orange);
+            border: 1px solid color(orange);
+            background-color: color(orange);
+          }
+          &.completed:before {
+            content: "\2713";
+            display: inline-block;
+            color: color(white);
+            
+          }
+        }
+      }
+      .line {
+        border: 1px solid color(slate);
+        display: inline-block;
+        height: 0rem;
+        width: 8rem;
+        margin-top: 20px;
+        transform: rotate(180deg);
+        -ms-transform: rotate(90deg);
+
+        &.completed {
+          color: color(white);
+          border: 1px solid color(orange);
+          background-color: color(orange);
+        }
+      }
+    }
+  }
+}

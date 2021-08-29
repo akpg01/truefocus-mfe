@@ -1,10 +1,11 @@
+@use "sass:math";
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
 .spinner {
   position: absolute;
-  top: calc(50% - #{$spinner-size/ 2});
-  left: calc(50% - #{$spinner-size/ 2});
+  top: calc(50% - #{math.div($spinner-size, 2)});
+  left: calc(50% - #{math.div($spinner-size, 2)});
   width: $spinner-size;
   height: $spinner-size;
   animation: spinner 0.75s linear infinite;
