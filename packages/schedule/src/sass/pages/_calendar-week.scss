@@ -63,6 +63,7 @@
 
   .calendar-day {
     text-align: center;
+    background-color: color(white);
   }
 
   .calendar-day span {
@@ -88,6 +89,7 @@
 
   .calendar-row.wkrow {
     border: 1px solid color(medGray);
+    background-color: color(white);
   }
 
   .calendar-day-head-wk:hover {

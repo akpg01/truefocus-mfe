@@ -7,9 +7,9 @@ import Week from "./calendar-week";
 
 export default ({ history }) => {
   const [date, setDate] = useState(moment());
-  const [showMonth, setShowMonth] = useState(true);
+  const [showMonth, setShowMonth] = useState(false);
   const [showWeek, setShowWeek] = useState(false);
-  const [showDay, setShowDay] = useState(false);
+  const [showDay, setShowDay] = useState(true);
 
   const changeDateHandler = (dir = "", cal = "", dte = null) => {
     if (dir === "inc") {

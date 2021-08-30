@@ -159,7 +159,8 @@ export default ({
     let daysMonth = [];
     for (let d = 1; d <= daysInMonth(); d++) {
       let current =
-        d === currentDay() && dateObj.format("M") === moment().format("M")
+        d === parseInt(currentDay()) &&
+        dateObj.format("M") == moment().format("M")
           ? "today"
           : "";
       daysMonth.push(

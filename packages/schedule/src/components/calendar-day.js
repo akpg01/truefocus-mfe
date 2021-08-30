@@ -15,7 +15,7 @@ export default ({
   dayViewHandler,
   changeDate,
 }) => {
-  const [dateObj, setDateObj] = useState(moment(new Date(date)));
+  const [dateObj, setDateObj] = useState(moment(new Date(date), "MM-DD-YYYY"));
   const matches = localStorage.getItem("matches");
 
   const onPrev = () => {
@@ -36,7 +36,8 @@ export default ({
     return JSON.parse(matches).map((e) =>
       e.weekly.map(
         (el, i) =>
-          moment(new Date(el.day)).format("l") === dateObj.format("l") && (
+          moment(new Date(el.day), "MM-DD-YYYY").format("l") ===
+            dateObj.format("l") && (
             <>
               {el.hours > 0 && (
                 <li key={el.day + i}>

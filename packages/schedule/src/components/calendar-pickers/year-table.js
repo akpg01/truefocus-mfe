@@ -4,18 +4,21 @@ import moment from "moment";
 export default ({ props, dateObj, setYear }) => {
   const getDates = (startDate, stopDate) => {
     let dateArray = [];
-    let currentDate = moment(dateObj).set(startDate, "year");
+    let currentDate = moment(dateObj, "MM-DD-YYYY").set(startDate, "year");
     let endDate = moment(stopDate);
 
     while (currentDate <= endDate) {
-      dateArray.push(moment(currentDate).format("YYYY"));
-      currentDate = moment(currentDate).add(1, "year");
+      dateArray.push(moment(currentDate, "MM-DD-YYYY").format("YYYY"));
+      currentDate = moment(currentDate, "MM-DD-YYYY").add(1, "year");
     }
     return dateArray;
   };
 
   let years = [];
-  let nextten = moment(dateObj).set(props, "year").add(14, "year").format("Y");
+  let nextten = moment(dateObj, "MM-DD-YYYY")
+    .set(props, "year")
+    .add(14, "year")
+    .format("Y");
   let tenyear = getDates(props, nextten);
 
   tenyear.map((data) => {

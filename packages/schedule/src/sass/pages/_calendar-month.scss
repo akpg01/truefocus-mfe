@@ -1,18 +1,18 @@
 /* Table */
+
 .table-container {
   margin: 15rem 0;
 
-  
   .date-container-text {
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    
-     .arrows {
+
+    .arrows {
       padding: 10px;
-      font-size: 1.2rem
+      font-size: 1.2rem;
     }
   }
 
@@ -98,6 +98,7 @@
       min-height: 80px;
       font-size: 11px;
       position: relative;
+      background-color: color(white);
     }
 
     * html div.calendar-day {
@@ -114,11 +115,13 @@
       cursor: default !important;
     }
 
+    td.calendar-day.day.first-div.today {
+      background-color: color(lightGray);
+    }
+
     html div.calendar-day-np {
       height: 80px;
     }
-
-   
 
     td.calendar-day-head {
       background: #ccc;
@@ -222,10 +225,9 @@
 
     .calendar-day {
       text-align: center;
-    }
-
-    .calendar-day span {
-      font-size: 1.2rem;
+      span {
+        font-size: 1.2rem;
+      }
     }
 
     .weekly {
@@ -242,9 +244,6 @@
       margin-right: -6%;
     }
 
-    td.today {
-      background-color: #eef1f6;
-    }
     .date-container-date-section .date-month,
     .date-container-date-section .date-year {
       font-weight: bolder;
