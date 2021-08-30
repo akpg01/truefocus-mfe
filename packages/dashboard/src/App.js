@@ -3,7 +3,7 @@ import { Switch, Route, BrowserRouter } from "react-router-dom";
 
 import Home from "./components/dashboard";
 import Calculator from "./components/calculator";
-import Schedule from "./components/schedule";
+import Schedule from "./components/plan";
 import Availability from "./components/availability";
 import Projects from "./components/projects";
 
