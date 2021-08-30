@@ -1,7 +1,7 @@
 .multi-form-layout {
   .multi-form-progress {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     margin: 35px auto;
     max-width: 70rem;
     padding: 0px 15px;
@@ -41,7 +41,6 @@
             content: "\2713";
             display: inline-block;
             color: color(white);
-            
           }
         }
       }
