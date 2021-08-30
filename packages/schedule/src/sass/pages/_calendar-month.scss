@@ -1,0 +1,357 @@
+/* Table */
+.table-container {
+  margin: 15rem 0;
+
+  
+  .date-container-text {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    
+     .arrows {
+      padding: 10px;
+      font-size: 1.2rem
+    }
+  }
+
+  .date-container-date-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 200px;
+    font-size: 1.8rem;
+
+    .date-month {
+      padding: 10px;
+    }
+
+    .date-year {
+      padding: 10px;
+    }
+  }
+  table {
+    .navig1 {
+      margin-bottom: 24%;
+      position: relative;
+      left: 29%;
+    }
+
+    .navig1 li {
+      font-size: 14px;
+      display: inline-block;
+      padding-right: 33%;
+      margin-left: 12px;
+    }
+
+    .navig1 li a {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      margin-top: -5%;
+    }
+
+    .navig2 li {
+      float: right;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .navig2 li {
+      display: block;
+      text-align: center;
+      padding: 18px;
+      text-decoration: none;
+      margin-top: 4%;
+      color: color(orange);
+    }
+
+    .navig2-wk li {
+      float: right;
+      font-size: 12px;
+    }
+
+    .navig2-wk li a {
+      display: block;
+      text-align: center;
+      padding: 13px;
+      text-decoration: none;
+      margin-top: 10%;
+    }
+
+    table.calendar {
+      margin: 50px auto;
+      border-radius: 5px;
+      box-shadow: 0 0px 1px rgba(0, 0, 0, 0.1);
+    }
+
+    table.categories {
+      margin: auto;
+    }
+
+    table.calendar th {
+      border: 0;
+    }
+
+    td.calendar-day {
+      min-height: 80px;
+      font-size: 11px;
+      position: relative;
+    }
+
+    * html div.calendar-day {
+      height: 85px;
+    }
+
+    td.calendar-day:hover {
+      background: #eceff5;
+    }
+
+    td.calendar-day-np {
+      background: #eee;
+      min-height: 80px;
+      cursor: default !important;
+    }
+
+    html div.calendar-day-np {
+      height: 80px;
+    }
+
+   
+
+    td.calendar-day-head {
+      background: #ccc;
+      text-align: center;
+      width: 120px;
+      padding: 5px;
+      border-bottom: 1px solid #999;
+      border-top: 1px solid #999;
+      border-right: 1px solid #999;
+      font-size: 16px;
+      font-weight: bold;
+      font-style: italic;
+      cursor: default !important;
+    }
+
+    td.calendar-day-head-wk {
+      text-align: center;
+      width: 120px;
+      padding: 5px;
+      border-bottom: 1px solid #999;
+      border-top: 1px solid #999;
+      border-right: 1px solid #999;
+      font-size: 16px;
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    td.calendar-day-head-wk.current {
+      background-position: right -4px 3px;
+    }
+
+    td.calendar-day-head-wk:hover {
+      background-color: #a6a6a6;
+    }
+
+    #calendar td:first-child {
+      border-left: 1px solid #999;
+    }
+
+    tr td:nth-child(1) {
+      border-left: 1px solid #999;
+    }
+
+    div.day-number {
+      background: #999;
+      padding: 5px;
+      color: #fff;
+      float: right;
+      margin: -5px -5px 60px 0;
+      width: 20px;
+      text-align: center;
+    }
+    /* shared */
+
+    td.calendar-day,
+    td.calendar-day-np {
+      width: 150px;
+      padding: 5px;
+      border-bottom: 1px solid #999;
+      border-right: 1px solid #999;
+    }
+
+    .date-line {
+      font-size: 1.5rem;
+    }
+
+    #calendar caption {
+      font-size: 90%;
+      font-weight: bold;
+    }
+
+    .calendar caption-wkly {
+      text-align: center;
+      margin: 9px;
+      font-size: 80%;
+      position: relative;
+    }
+
+    .caption-wkly {
+      font-size: 90%;
+    }
+
+    td {
+      height: 80px;
+    }
+
+    tr.calendar-link {
+      margin-top: 2%;
+      height: 80px;
+    }
+
+    th.subheading {
+      font-size: 1.3rem;
+      padding: 20px;
+      background-color: #999;
+    }
+
+    .table-container .thead {
+      text-align: center;
+    }
+
+    .calendar-day {
+      text-align: center;
+    }
+
+    .calendar-day span {
+      font-size: 1.2rem;
+    }
+
+    .weekly {
+      width: 90%;
+    }
+
+    #lftPrev {
+      padding-right: 38%;
+      margin-left: -6%;
+      margin-right: 8%;
+    }
+
+    #lftNext {
+      margin-right: -6%;
+    }
+
+    td.today {
+      background-color: #eef1f6;
+    }
+    .date-container-date-section .date-month,
+    .date-container-date-section .date-year {
+      font-weight: bolder;
+    }
+
+    .event-desc {
+      width: 8px;
+      height: 8px;
+      border-radius: 100%;
+      text-align: inline-block;
+    }
+
+    ul.events li {
+      margin-top: 50px;
+      text-align: center;
+      float: left;
+    }
+
+    .event-desc-wk {
+      color: color(medOrange);
+      margin: 3px 0 3px 0;
+      text-decoration: none;
+      text-align: center;
+      font-size: 110%;
+    }
+
+    .weekly-day.event-list li {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-size: 16px;
+    }
+
+    .time {
+      color: color(medOrange);
+    }
+  }
+
+  @include response(smd) {
+    table,
+    .weekdays,
+    tbody,
+    th,
+    td,
+    tr {
+      display: block;
+      border-collapse: collapse;
+    }
+    /* Hide table headers */
+    .weekdays,
+    .calendar-day-np {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    thead {
+      display: inline-block;
+      width: 100%;
+    }
+    #calendar td {
+      height: auto;
+      width: 60%;
+      padding: 15px;
+      border-left: 1px solid #999;
+    }
+    #calendar .calendar-link {
+      border-bottom: 1px solid #999;
+      margin-top: 2%;
+      height: 80px;
+    }
+
+    tr.calendar-link {
+      display: flex;
+      justify-content: center;
+    }
+
+    tr td:nth-child(1) {
+      border-left: none;
+    }
+    .event-desc {
+      font-size: 14px;
+    }
+    div.day-number {
+      float: left;
+      margin: -10px -9px 10px -10px;
+    }
+    .caption-wkly {
+      left: 18%;
+    }
+    tbody {
+      padding-top: 4%;
+    }
+
+    td.calendar-day,
+    td.calendar-day-np {
+      width: 95%;
+    }
+  }
+
+  @include response(xxs) {
+    .navig2 li a {
+      padding: 4px;
+    }
+    .navig1 li a {
+      position: absolute;
+    }
+  }
+}

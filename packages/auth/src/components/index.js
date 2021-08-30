@@ -36,31 +36,6 @@ export default ({ onSignIn }) => {
             </label>
           </div>
 
-          <form action="/#" className="signup-form">
-            <h3 className="form-heading">Sign Up</h3>
-            <div className="fullname-inputs-wrapper">
-              <input type="text" placeholder="First name" />
-              <input type="text" placeholder="Last name" />
-            </div>
-            <input type="text" className="form-input" placeholder="Username" />
-            <input
-              type="email"
-              className="form-input"
-              placeholder="Email Address"
-            />
-            <input
-              type="password"
-              className="form-input"
-              placeholder="Password"
-            />
-            <input
-              type="submit"
-              className="form-btn"
-              value="SIGN UP"
-              onClick={handleLogin}
-            />
-          </form>
-
           <form action="" className="login-form">
             <h3 className="form-heading">Log In</h3>
             <input
@@ -84,6 +59,31 @@ export default ({ onSignIn }) => {
                 <span>Forgot username or password?</span>
               </Link>
             </div>
+          </form>
+
+          <form action="/#" className="signup-form">
+            <h3 className="form-heading">Sign Up</h3>
+            <div className="fullname-inputs-wrapper">
+              <input type="text" placeholder="First name" />
+              <input type="text" placeholder="Last name" />
+            </div>
+            <input type="text" className="form-input" placeholder="Username" />
+            <input
+              type="email"
+              className="form-input"
+              placeholder="Email Address"
+            />
+            <input
+              type="password"
+              className="form-input"
+              placeholder="Password"
+            />
+            <input
+              type="submit"
+              className="form-btn"
+              value="SIGN UP"
+              onClick={handleLogin}
+            />
           </form>
         </div>
       </div>
