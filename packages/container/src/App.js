@@ -1,6 +1,7 @@
 import React, { useState, lazy, Suspense, useEffect } from "react";
-
 import { Router, Route, Switch, Redirect } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./store";
 
 import Header from "./components/layout/navbar";
 import Footer from "./components/layout/footer";
@@ -37,33 +38,35 @@ export default () => {
 
   return (
     <>
-      <Router history={history}>
-        <Suspense fallback={<Spinner />}>
-          <Header
-            onSignOut={() => setIsSignedIn(false)}
-            isSignedIn={isSignedIn}
-          />
-          <Switch>
-            <Route path="/auth">
-              <AuthLazy onSignIn={() => setIsSignedIn(true)} />
-            </Route>
-            <Route path="/availability" component={AvailabilityLazy} />
-            <Route path="/goals" component={GoalsLazy} />
-            <Route path="/pomodoro" component={PomodoroLazy} />
-            <Route path="/projects" component={ProjectsLazy} />
-            <Route path="/schedule" component={ScheduleLazy} />
-            <Route path="/stats" component={StatsLazy} />
-            <Route path="/calculator" component={CalculatorLazy} />
-            <Route path="/todos" component={TodosLazy} />
-            <Route path="/dashboard">
-              {!isSignedIn && <Redirect to="/auth/login" />}
-              <DashboardLazy />
-            </Route>
-            <Route path="/" component={LandingLazy} />
-          </Switch>
-          <Footer />
-        </Suspense>
-      </Router>
+      <Provider store={store}>
+        <Router history={history}>
+          <Suspense fallback={<Spinner />}>
+            <Header
+              onSignOut={() => setIsSignedIn(false)}
+              isSignedIn={isSignedIn}
+            />
+            <Switch>
+              <Route path="/auth">
+                <AuthLazy onSignIn={() => setIsSignedIn(true)} />
+              </Route>
+              <Route path="/availability" component={AvailabilityLazy} />
+              <Route path="/goals" component={GoalsLazy} />
+              <Route path="/pomodoro" component={PomodoroLazy} />
+              <Route path="/projects" component={ProjectsLazy} />
+              <Route path="/schedule" component={ScheduleLazy} />
+              <Route path="/stats" component={StatsLazy} />
+              <Route path="/calculator" component={CalculatorLazy} />
+              <Route path="/todos" component={TodosLazy} />
+              <Route path="/dashboard">
+                {!isSignedIn && <Redirect to="/auth/login" />}
+                <DashboardLazy />
+              </Route>
+              <Route path="/" component={LandingLazy} />
+            </Switch>
+            <Footer />
+          </Suspense>
+        </Router>
+      </Provider>
     </>
   );
 };
