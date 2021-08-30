@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 export default ({ onSignIn }) => {
@@ -38,8 +39,8 @@ export default ({ onSignIn }) => {
           <form action="/#" className="signup-form">
             <h3 className="form-heading">Sign Up</h3>
             <div className="fullname-inputs-wrapper">
-              <input type="text" placeholder="First Name" />
-              <input type="text" placeholder="Last Name" />
+              <input type="text" placeholder="First name" />
+              <input type="text" placeholder="Last name" />
             </div>
             <input type="text" className="form-input" placeholder="Username" />
             <input
@@ -78,6 +79,11 @@ export default ({ onSignIn }) => {
               value="LOG IN"
               onClick={handleSignUp}
             />
+            <div className="forgotpswd">
+              <Link to="/auth/forgotpswd">
+                <span>Forgot username or password?</span>
+              </Link>
+            </div>
           </form>
         </div>
       </div>

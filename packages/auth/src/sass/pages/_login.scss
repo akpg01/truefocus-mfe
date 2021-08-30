@@ -73,6 +73,22 @@
   .form-input {
     width: 100%;
   }
+  .forgotpswd {
+    margin-top: 30px;
+    text-align: center;
+
+    span {
+      color: color(medOrange);
+    }
+  }
+
+  .forms-message {
+    margin: 40px 0px;
+    background-color: color(white);
+    border-radius: 5px;
+    padding: 40px;
+  }
+
   .form-btn {
     width: 35%;
     background-color: color(orange);
