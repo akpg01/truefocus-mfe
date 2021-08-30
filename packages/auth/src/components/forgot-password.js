@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default ({ onSignIn }) => {
   return (
@@ -15,6 +16,11 @@ export default ({ onSignIn }) => {
             />
             <input type="submit" className="form-btn" value="SUBMIT" />
           </form>
+          <div className="forgotpswd">
+            <Link to="/auth/login">
+              <span>Return to Login</span>
+            </Link>
+          </div>
         </div>
       </div>
     </>
